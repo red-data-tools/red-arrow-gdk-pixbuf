@@ -28,7 +28,7 @@ unless pixbuf.has_alpha?
 end
 
 narray = pixbuf.to_arrow.to_narray
-narray[nil, nil, 3] = 255
+narray[true, true, 3] = 255
 no_alpha_pixbuf = narray.to_arrow.to_pixbuf
 
 type = File.extname(path).gsub(/\A\./, "").downcase
